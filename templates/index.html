@@ -2,38 +2,37 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width , initial=scale=1.0">
-    <link rel="stylesheet" href="{{ url_for('static' , filename='style.css') }}">
-    <title>HOTEL RESERVATION PREDICTION ❤️</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}" />
+    <title>Hotel Reservation Prediction </title>
 </head>
-
 
 <body>
     <div class="container">
         <h2>Hotel Reservation Prediction</h2>
 
-        <form method="POST">
+        <form method="POST" novalidate>
             <div class="form-group">
                 <label for="lead_time">Lead Time</label>
-                <input type="number" id="lead_time" name="lead_time" required>
-            </div>
-
-
-            <div class="form-group">
-                <label for="no_of_special_request">No_of_special_request</label>
-                <input type="number" id="no_of_special_request" name="no_of_special_request" required>
+                <input type="number" id="lead_time" name="lead_time" required min="0" />
             </div>
 
             <div class="form-group">
-                <label for="avg_price_per_room">Avg_price_per_room</label>
-                <input type="number" id="avg_price_per_room" name="avg_price_per_room" required>
+                <label for="no_of_special_request">Number of Special Requests</label>
+                <input type="number" id="no_of_special_request" name="no_of_special_request" required min="0" />
+            </div>
+
+            <div class="form-group">
+                <label for="avg_price_per_room">Average Price per Room</label>
+                <input type="number" id="avg_price_per_room" name="avg_price_per_room" required min="0" step="0.01" />
             </div>
 
             <div class="form-group">
                 <label for="arrival_month">Arrival Month</label>
                 <select id="arrival_month" name="arrival_month" required>
-                    <option value="1">Januray</option>
+                    <option value="" disabled selected>Choose a month</option>
+                    <option value="1">January</option>
                     <option value="2">February</option>
                     <option value="3">March</option>
                     <option value="4">April</option>
@@ -48,47 +47,21 @@
                 </select>
             </div>
 
-
             <div class="form-group">
                 <label for="arrival_date">Arrival Date</label>
                 <select id="arrival_date" name="arrival_date" required>
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                    <option value="11">11</option>
-                    <option value="12">12</option>
-                    <option value="13">13</option>
-                    <option value="14">14</option>
-                    <option value="15">15</option>
-                    <option value="16">16</option>
-                    <option value="17">17</option>
-                    <option value="18">18</option>
-                    <option value="19">19</option>
-                    <option value="20">20</option>
-                    <option value="21">21</option>
-                    <option value="22">22</option>
-                    <option value="23">23</option>
-                    <option value="24">24</option>
-                    <option value="25">25</option>
-                    <option value="26">26</option>
-                    <option value="27">27</option>
-                    <option value="28">28</option>
-                    <option value="29">29</option>
-                    <option value="30">30</option>
-                    <option value="31">31</option>
+                    <option value="" disabled selected>Choose a date</option>
+                    <!-- generate options dynamically if possible -->
+                    {% for day in range(1, 32) %}
+                    <option value="{{ day }}">{{ day }}</option>
+                    {% endfor %}
                 </select>
             </div>
 
             <div class="form-group">
-                <label for="market_segment_type">Market_segment_type</label>
+                <label for="market_segment_type">Market Segment Type</label>
                 <select id="market_segment_type" name="market_segment_type" required>
+                    <option value="" disabled selected>Select Segment</option>
                     <option value="0">Aviation</option>
                     <option value="1">Complimentary</option>
                     <option value="2">Corporate</option>
@@ -98,18 +71,19 @@
             </div>
 
             <div class="form-group">
-                <label for="no_of_week_nights">No_of_week_nights</label>
-                <input type="number" id="no_of_week_nights" name="no_of_week_nights" required>
+                <label for="no_of_week_nights">Number of Week Nights</label>
+                <input type="number" id="no_of_week_nights" name="no_of_week_nights" required min="0" />
             </div>
 
             <div class="form-group">
-                <label for="no_of_weekend_nights">No_of_weekend_nights</label>
-                <input type="number" id="no_of_weekend_nights" name="no_of_weekend_nights" required>
+                <label for="no_of_weekend_nights">Number of Weekend Nights</label>
+                <input type="number" id="no_of_weekend_nights" name="no_of_weekend_nights" required min="0" />
             </div>
 
             <div class="form-group">
-                <label for="type_of_meal_plan">Type_of_meal_plan</label>
+                <label for="type_of_meal_plan">Type of Meal Plan</label>
                 <select id="type_of_meal_plan" name="type_of_meal_plan" required>
+                    <option value="" disabled selected>Select Meal Plan</option>
                     <option value="0">Meal Plan 1</option>
                     <option value="1">Meal Plan 2</option>
                     <option value="2">Meal Plan 3</option>
@@ -118,8 +92,9 @@
             </div>
 
             <div class="form-group">
-                <label for="room_type_reserved">Type_of_meal_plan</label>
+                <label for="room_type_reserved">Room Type Reserved</label>
                 <select id="room_type_reserved" name="room_type_reserved" required>
+                    <option value="" disabled selected>Select Room Type</option>
                     <option value="0">Room Type 1</option>
                     <option value="1">Room Type 2</option>
                     <option value="2">Room Type 3</option>
@@ -136,14 +111,13 @@
         {% if prediction is not none %}
         <div class="result">
             {% if prediction == 0 %}
-            <p>The Customer is going to cancel his reservation</p>
+            <p class="cancel">The Customer is going to cancel his reservation</p>
             {% elif prediction == 1 %}
-            <p>The Customer is not going to cancel his reservation</p>
+            <p class="not-cancel">The Customer is not going to cancel his reservation</p>
             {% endif %}
         </div>
         {% endif %}
     </div>
-
 </body>
 
 </html>
