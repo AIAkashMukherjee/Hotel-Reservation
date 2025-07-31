@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/akashmukherjee/Programming/MLOPS/Krish%20Naik/Udmey/Mlops/Hotel%20Reservation/mlruns/0/3378f5a04a0a43beae0166d211917b74/artifacts
+end_time: 1753961604664
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 3378f5a04a0a43beae0166d211917b74
+run_name: magnificent-hawk-953
+run_uuid: 3378f5a04a0a43beae0166d211917b74
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753961583377
+status: 3
+tags: []
+user_id: akashmukherjee

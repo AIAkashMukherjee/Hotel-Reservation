@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/akashmukherjee/Programming/MLOPS/Krish%20Naik/Udmey/Mlops/Hotel%20Reservation/mlruns/0/4051bb2799744f42a1d3c3b1bf029c53/artifacts
+end_time: 1753962147600
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: 4051bb2799744f42a1d3c3b1bf029c53
+run_name: handsome-goat-491
+run_uuid: 4051bb2799744f42a1d3c3b1bf029c53
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753962126182
+status: 3
+tags: []
+user_id: akashmukherjee

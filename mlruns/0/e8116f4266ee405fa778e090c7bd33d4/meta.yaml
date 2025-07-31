@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/akashmukherjee/Programming/MLOPS/Krish%20Naik/Udmey/Mlops/Hotel%20Reservation/mlruns/0/e8116f4266ee405fa778e090c7bd33d4/artifacts
+end_time: 1753962076680
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: e8116f4266ee405fa778e090c7bd33d4
+run_name: enchanting-snake-978
+run_uuid: e8116f4266ee405fa778e090c7bd33d4
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753962054974
+status: 3
+tags: []
+user_id: akashmukherjee

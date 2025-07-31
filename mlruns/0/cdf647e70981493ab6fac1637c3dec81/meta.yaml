@@ -1,0 +1,15 @@
+artifact_uri: file:///Users/akashmukherjee/Programming/MLOPS/Krish%20Naik/Udmey/Mlops/Hotel%20Reservation/mlruns/0/cdf647e70981493ab6fac1637c3dec81/artifacts
+end_time: 1753961334863
+entry_point_name: ''
+experiment_id: '0'
+lifecycle_stage: active
+run_id: cdf647e70981493ab6fac1637c3dec81
+run_name: merciful-slug-888
+run_uuid: cdf647e70981493ab6fac1637c3dec81
+source_name: ''
+source_type: 4
+source_version: ''
+start_time: 1753961313549
+status: 3
+tags: []
+user_id: akashmukherjee
