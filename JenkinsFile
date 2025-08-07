@@ -3,13 +3,11 @@ pipeline {
     stages {
         stage('Cloning Github repo to Jenkins') {
             steps {
-                checkout scmGit(
-                    branches: [[name: '*/main']],
-                    userRemoteConfigs: [[
-                        credentialsId: 'github-token',
-                        url: 'https://github.com/AIAkashMukherjee/Hotel-Reservation.git'
-                    ]]
-                )
+                script{
+                    echo 'Cloning From Github'
+                    checkout scmGit(branches: [[name: '*/main']], extensions: [], userRemoteConfigs: [[credentialsId: 'github-token', url: 'https://github.com/AIAkashMukherjee/Hotel-Reservation.git']])
+                }
+                
             }
         }
     }
